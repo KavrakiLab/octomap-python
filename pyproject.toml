@@ -1,9 +1,12 @@
+[build-system]
+requires = ["cython", "numpy", "setuptools"]
+build-backend = "setuptools.build_meta"
+
 [tool.black]
 line-length = 79
 exclude = '''
 (
     ^/\..*
   | ^/src/
-  | ^/github2pypi/
 )
 '''
