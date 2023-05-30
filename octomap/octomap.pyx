@@ -442,6 +442,17 @@ cdef class OcTree:
         else:
             return self.thisptr.readBinary(string(<char*?>filename))
 
+    def readBinaryData(self, data):
+        cdef defs.istringstream iss
+        iss.str(string(<char*?>data, len(data)))
+        self.thisptr.readBinaryData(<defs.istream&?>iss)
+
+
+    def readData(self, data):
+        cdef defs.istringstream iss
+        iss.str(string(<char*?>data, len(data)))
+        self.thisptr.readData(<defs.istream&?>iss)
+
     def writeBinary(self, filename=None):
         cdef defs.ostringstream oss
         if not filename is None:

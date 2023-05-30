@@ -120,6 +120,8 @@ cdef extern from "include_and_setting.h" namespace "octomap":
         bool write(ostream& s)
         bool readBinary(string& filename)
         bool readBinary(istream& s)
+        void readBinaryData(istream& s)
+        void readData(istream& s)
         bool writeBinary(string& filename)
         bool writeBinary(ostream& s)
         bool isNodeOccupied(OcTreeNode& occupancyNode)
