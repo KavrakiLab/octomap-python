@@ -190,13 +190,13 @@ cdef class iterator_base:
 
     def getOccupancy(self):
         if self.__is_acceseable():
-            return (<defs.OcTreeNode>deref(deref(self.thisptr))).getOccupancy()
+            return (deref(deref(self.thisptr))).getOccupancy()
         else:
             raise NullPointerException
 
     def getValue(self):
         if self.__is_acceseable():
-            return (<defs.OcTreeNode>deref(deref(self.thisptr))).getValue()
+            return (deref(deref(self.thisptr))).getValue()
         else:
             raise NullPointerException
 
