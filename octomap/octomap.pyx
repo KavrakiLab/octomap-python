@@ -471,7 +471,7 @@ cdef class OcTree:
             else:
                 raise NullPointerException
         else:
-            return self.thisptr.isNodeOccupied(<defs.OcTreeNode>deref(deref((<tree_iterator>node).thisptr)))
+            return self.thisptr.isNodeOccupied(deref(deref((<tree_iterator>node).thisptr)))
 
     def isNodeAtThreshold(self, node):
         if isinstance(node, OcTreeNode):
@@ -480,7 +480,7 @@ cdef class OcTree:
             else:
                 raise NullPointerException
         else:
-            return self.thisptr.isNodeAtThreshold(<defs.OcTreeNode>deref(deref((<tree_iterator>node).thisptr)))
+            return self.thisptr.isNodeAtThreshold(deref(deref((<tree_iterator>node).thisptr)))
 
     def getLabels(self, np.ndarray[DOUBLE_t, ndim=2] points):
         cdef int i
