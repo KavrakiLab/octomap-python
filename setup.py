@@ -36,7 +36,7 @@ ext_modules = [
             "src/octomap/lib/libdynamicedt3d.a",
             "src/octomap/lib/liboctomap.a",
             "src/octomap/lib/liboctomath.a"
-            ]
+            ],
         )
     ]
 
