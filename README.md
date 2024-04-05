@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-git clone --recursive https://github.com/kavrakiLab/octomap-python.git
+git clone --recursive https://github.com/kavrakilab/octomap-python.git
 cd octomap-python
 pip install -e .
 ```
